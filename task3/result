@@ -1,0 +1,18 @@
+(venv) PS C:\PY\aaa_testing> python -m unittest task3/unittest_test.py
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK
+
+
+(venv) PS C:\PY\aaa_testing> python -m unittest -v task3/unittest_test.py
+test_fit_transform (task3.unittest_test.FitTransformUnitTest) ... ok
+test_fit_transform_args (task3.unittest_test.FitTransformUnitTest) ... ok
+test_fit_transform_type_error (task3.unittest_test.FitTransformUnitTest) ... ok
+test_fit_transform_with_additional_category (task3.unittest_test.FitTransformUnitTest) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK

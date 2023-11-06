@@ -1,0 +1,106 @@
+(venv) PS C:\PY\aaa_testing> python -m doctest task1/encode_test.py
+**********************************************************************
+File "C:\PY\aaa_testing\task1\encode_test.py", line 35, in encode_test.encode
+Failed example:
+    encode('whitespace test')
+Expected:
+    '.-- .... .. - . ...        .--. .- -.-. .   - . ... -'
+Got:
+    '.-- .... .. - . ... .--. .- -.-. .   - . ... -'
+**********************************************************************
+1 items had failures:
+   1 of   6 in encode_test.encode
+***Test Failed*** 1 failures.
+
+
+(venv) PS C:\PY\aaa_testing> python -m doctest -v task1/encode_test.py
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+Trying:
+    encode('HELLO')
+Expecting:
+    '.... . .-.. .-.. ---'
+ok
+Trying:
+    encode('')
+Expecting:
+    ''
+ok
+Trying:
+    encode('whitespace test')
+Expecting:
+    '.-- .... .. - . ...        .--. .- -.-. .   - . ... -'
+**********************************************************************
+File "C:\PY\aaa_testing\task1\encode_test.py", line 35, in encode_test.encode
+Failed example:
+    encode('whitespace test')
+Expected:
+    '.-- .... .. - . ...        .--. .- -.-. .   - . ... -'
+Got:
+    '.-- .... .. - . ... .--. .- -.-. .   - . ... -'
+Trying:
+    encode('directive test') # doctest: +NORMALIZE_WHITESPACE
+Expecting:
+    '-.. .. .-. . -.-. -          .. ...- .   - . ... -'
+ok
+Trying:
+    encode(1)
+Expecting:
+    Traceback (most recent call last):
+    AttributeError: 'int' object has no attribute 'upper'
+ok
+1 items had no tests:
+    encode_test
+**********************************************************************
+1 items had failures:
+   1 of   6 in encode_test.encode
+6 tests in 2 items.
+5 passed and 1 failed.
+***Test Failed*** 1 failures.
+
+
+(venv) PS C:\PY\aaa_testing> python -m doctest -o NORMALIZE_WHITESPACE task1/encode_test.py
+
+
+(venv) PS C:\PY\aaa_testing> python -m doctest -o NORMALIZE_WHITESPACE -v task1/encode_test.py
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+Trying:
+    encode('HELLO')
+Expecting:
+    '.... . .-.. .-.. ---'
+ok
+Trying:
+    encode('')
+Expecting:
+    ''
+ok
+Trying:
+    encode('whitespace test')
+Expecting:
+    '.-- .... .. - . ...        .--. .- -.-. .   - . ... -'
+ok
+Trying:
+    encode('directive test') # doctest: +NORMALIZE_WHITESPACE
+Expecting:
+    '-.. .. .-. . -.-. -          .. ...- .   - . ... -'
+ok
+Trying:
+    encode(1)
+Expecting:
+    Traceback (most recent call last):
+    AttributeError: 'int' object has no attribute 'upper'
+ok
+1 items had no tests:
+    encode_test
+1 items passed all tests:
+   6 tests in encode_test.encode
+6 tests in 2 items.
+6 passed and 0 failed.
+Test passed.

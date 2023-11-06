@@ -1,0 +1,26 @@
+(venv) PS C:\PY\aaa_testing> python -m pytest task4/pytest_test.py
+======================================================================================================= test session starts =======================================================================================================
+platform win32 -- Python 3.10.4, pytest-7.4.3, pluggy-1.3.0
+rootdir: C:\PY\aaa_testing
+plugins: cov-4.1.0
+collected 4 items
+
+task4\pytest_test.py ....                                                                                                                                                                                                    [100%]
+
+======================================================================================================== 4 passed in 0.01s ========================================================================================================
+
+
+(venv) PS C:\PY\aaa_testing> python -m pytest -v task4/pytest_test.py
+======================================================================================================= test session starts =======================================================================================================
+platform win32 -- Python 3.10.4, pytest-7.4.3, pluggy-1.3.0 -- C:\PY\Project\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\PY\aaa_testing
+plugins: cov-4.1.0
+collected 4 items
+
+task4/pytest_test.py::test_fit_transform PASSED                                                                                                                                                                              [ 25%]
+task4/pytest_test.py::test_fit_transform_type_error PASSED                                                                                                                                                                   [ 50%]
+task4/pytest_test.py::test_fit_transform_with_additional_category PASSED                                                                                                                                                     [ 75%]
+task4/pytest_test.py::test_fit_transform_args PASSED                                                                                                                                                                         [100%]
+
+======================================================================================================== 4 passed in 0.01s ========================================================================================================
