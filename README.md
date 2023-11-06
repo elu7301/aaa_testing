@@ -13,8 +13,8 @@ python -m unittest -v task3/unittest_test.py
 python -m pytest task4/pytest_test.py  
 python -m pytest -v task4/pytest_test.py
 ## **Task 5**
-cd task5
-python -m pytest year_test.py
+cd task5  
+python -m pytest year_test.py  
 python -m pytest -v year_test.py  
 python -m pytest year_test.py --cov . --cov-report html  
 python -m pytest -v year_test.py --cov . --cov-report html
